@@ -38,6 +38,7 @@ void insertionSortDemo(){
     arr.push_back(3);
     arr.push_back(2);
     arr.push_back(1);
+    arr.push_back(4);
     std::vector<int>::iterator first = arr.begin();
     std::vector<int>::iterator last = arr.end();
     last--;

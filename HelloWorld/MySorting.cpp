@@ -10,15 +10,29 @@
 
 template<class I>
 void insertionSort(I first, I last){
-    linearInsert(first, last, *last);
+    I pos = first+1;
+    while (pos!=last+1){
+        linearInsert(first, pos, *pos);
+        pos++;
+    }
 }
 
 template<class I, class T>
 void linearInsert(I first, I last, T value) {
-    if( *last <= value ){
-        while(last != first) *last=*last--;
+    if( value < *first ){
+        while(last != first) {
+            I pos = last--;
+            *pos = *last;
+        }
+        *last = value;
+    } else {
+        I pos = last--;
+        while( *last > value ){
+            *pos = *last;
+            pos = last--;
+        }
+        *pos = value;
     }
-    *last = value;
 }
 
 template <class I>

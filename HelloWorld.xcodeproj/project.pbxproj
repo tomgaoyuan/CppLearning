@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E214D7DA1E12A7B500CC2019 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E214D7D91E12A7B500CC2019 /* main.cpp */; };
+		E24B1DDD1E57F3DD00DF4379 /* MySorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E24B1DDC1E57F3DD00DF4379 /* MySorting.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		E214D7D61E12A7B500CC2019 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		E214D7D91E12A7B500CC2019 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E24B1DDB1E57F16B00DF4379 /* MySorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySorting.h; sourceTree = "<group>"; };
+		E24B1DDC1E57F3DD00DF4379 /* MySorting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MySorting.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				E214D7D91E12A7B500CC2019 /* main.cpp */,
+				E24B1DDB1E57F16B00DF4379 /* MySorting.h */,
+				E24B1DDC1E57F3DD00DF4379 /* MySorting.cpp */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B1DDD1E57F3DD00DF4379 /* MySorting.cpp in Sources */,
 				E214D7DA1E12A7B500CC2019 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +222,7 @@
 		E214D7DE1E12A7B500CC2019 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +230,7 @@
 		E214D7DF1E12A7B500CC2019 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -246,6 +254,7 @@
 				E214D7DF1E12A7B500CC2019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
