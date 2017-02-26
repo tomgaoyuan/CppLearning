@@ -7,16 +7,19 @@
 //
 #include "MySorting.h"
 #include <iostream>
-#include<vector>
+#include <vector>
+#include <list>
 
 
 void lambdaFunDemo();
 void insertionSortDemo();
+void mergeSortDemo();
 
 int main(int argc, const char * argv[]) {
     //std::cout << "Hello, World!\n"<<std::endl;
     //lambdaFunDemo();
-    insertionSortDemo();
+    //insertionSortDemo();
+    mergeSortDemo();
     return 0;
 }
 
@@ -46,4 +49,24 @@ void insertionSortDemo(){
     insertionSort(first, last);
     print(first, last);
     delete &arr;
+}
+
+void mergeSortDemo(){
+    std::list<int> &lst = *new std::list<int>;
+    lst.push_back(6);
+    lst.push_back(5);
+    lst.push_back(4);
+    lst.push_back(3);
+    lst.push_back(2);
+    lst.push_back(1);
+    std::list<int>::iterator first = lst.begin();
+    std::list<int>::iterator last = lst.end();
+    last--;
+    print(first, last);
+    mergeSort(lst);
+    first = lst.begin();
+    last = lst.end();
+    last--;
+    print(first,last);
+    delete &lst;
 }
