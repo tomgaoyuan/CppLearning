@@ -14,12 +14,14 @@
 void lambdaFunDemo();
 void insertionSortDemo();
 void mergeSortDemo();
+void quickSortDemo();
 
 int main(int argc, const char * argv[]) {
     //std::cout << "Hello, World!\n"<<std::endl;
     //lambdaFunDemo();
     //insertionSortDemo();
     mergeSortDemo();
+    //quickSortDemo();
     return 0;
 }
 
@@ -38,10 +40,7 @@ void lambdaFunDemo() {
 
 void insertionSortDemo(){
     std::vector<int> &arr = *new std::vector<int>;
-    arr.push_back(3);
-    arr.push_back(2);
-    arr.push_back(1);
-    arr.push_back(4);
+    initDemo(arr);
     std::vector<int>::iterator first = arr.begin();
     std::vector<int>::iterator last = arr.end();
     last--;
@@ -53,12 +52,7 @@ void insertionSortDemo(){
 
 void mergeSortDemo(){
     std::list<int> &lst = *new std::list<int>;
-    lst.push_back(6);
-    lst.push_back(5);
-    lst.push_back(4);
-    lst.push_back(3);
-    lst.push_back(2);
-    lst.push_back(1);
+    initDemo(lst);
     std::list<int>::iterator first = lst.begin();
     std::list<int>::iterator last = lst.end();
     last--;
@@ -69,4 +63,10 @@ void mergeSortDemo(){
     last--;
     print(first,last);
     delete &lst;
+}
+void quickSortDemo(){
+    std::vector<int> arr;
+    initDemo(arr);
+    quick_sort_loop(arr.begin(), arr.end());
+    print(arr.begin(), --arr.end());
 }

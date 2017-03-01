@@ -56,14 +56,52 @@ void linearInsert(I first, I last, T value) {
     }
 }
 
+template<typename I, typename T>
+I unguarded_partition(I first, I last, T pivot) {
+    while(1){
+        while(*first < pivot) first++;
+        last--;
+        while(*last > pivot) last--;
+        if (first >= last) return first;
+        *first += *last;
+        *last = *first - *last;
+        *first -= *last;
+        ++first;
+    }
+}
+
+template<typename I>
+void quick_sort_loop(I first, I last){
+    I cut = unguarded_partition(first, last, *(first + (last-first)/2) );
+    while(last - first > 1){
+        if(cut-first > last-cut) {
+            quick_sort_loop(first, cut);
+            first = cut;
+        } else {
+            quick_sort_loop(cut, last);
+            last = cut;
+        }
+    }
+}
+
 template <class I>
 void print(I first, I last) {
     while (first!=last) std::cout<<*first++<<std::endl;
     std::cout<<*first++<<std::endl;
 }
 
+template<typename V>
+void initDemo(V &v){
+    for(int c = 9; c>=0 ; c--)
+        v.push_back(c);
+}
+
 template void insertionSort(std::vector<int>::iterator, std::vector<int>::iterator) ;
 template void linearInsert(std::vector<int>::iterator, std::vector<int>::iterator, int);
+template void mergeSort(std::list<int> &l);
 template void print(std::vector<int>::iterator, std::vector<int>::iterator);
 template void print(std::list<int>::iterator, std::list<int>::iterator);
-template void mergeSort(std::list<int> &l);
+template void initDemo(std::list<int>&);
+template void initDemo(std::vector<int>&);
+template void quick_sort_loop(std::vector<int>::iterator, std::vector<int>::iterator);
+template std::vector<int>::iterator unguarded_partition(std::vector<int>::iterator, std::vector<int>::iterator, int);

@@ -5,7 +5,7 @@
 //  Created by Tom on 2017/2/18.
 //  Copyright © 2017 Tom. All rights reserved.
 //
-
+//Algorithms are from 'Data Structure & STL'
 #ifndef MySorting_h
 #define MySorting_h
 
@@ -15,6 +15,9 @@
 
 template <class I> void insertionSort(I first, I last);
 template <class I, class T> void linearInsert(I first, I last, T value);
-template <class I> void print(I first, I last);
 template<typename T>void mergeSort(std::list<T> &l);
+template<typename I, typename T> I unguarded_partition(I first, I last, T pivot);
+template<typename I> void quick_sort_loop(I first, I last);
+template<typename V> void initDemo(V &v);
+template <class I> void print(I first, I last);
 #endif /* MySorting_h */
