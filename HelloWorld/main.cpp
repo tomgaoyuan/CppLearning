@@ -9,19 +9,21 @@
 #include <iostream>
 #include <vector>
 #include <list>
-
+#include <set>
 
 void lambdaFunDemo();
 void insertionSortDemo();
 void mergeSortDemo();
 void quickSortDemo();
+void treeSortDemo();
 
 int main(int argc, const char * argv[]) {
     //std::cout << "Hello, World!\n"<<std::endl;
     //lambdaFunDemo();
     //insertionSortDemo();
-    mergeSortDemo();
+    //mergeSortDemo();
     //quickSortDemo();
+    treeSortDemo();
     return 0;
 }
 
@@ -64,9 +66,17 @@ void mergeSortDemo(){
     print(first,last);
     delete &lst;
 }
+
 void quickSortDemo(){
     std::vector<int> arr;
     initDemo(arr);
     quick_sort_loop(arr.begin(), arr.end());
+    print(arr.begin(), --arr.end());
+}
+
+void treeSortDemo(){
+    std::vector<int> arr;
+    initDemo(arr);
+    tree_sort(arr.begin(), arr.end());
     print(arr.begin(), --arr.end());
 }

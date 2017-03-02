@@ -12,7 +12,9 @@
 #include <iostream>
 #include <vector>
 #include <list>
-
+#include <set>
+template <typename I, typename T> void tree_sort_aux(I first, I last, T value);
+template <typename I > void tree_sort(I first, I last);
 template <class I> void insertionSort(I first, I last);
 template <class I, class T> void linearInsert(I first, I last, T value);
 template<typename T>void mergeSort(std::list<T> &l);

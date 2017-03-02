@@ -8,6 +8,19 @@
 
 #include "MySorting.h"
 
+template <typename I, typename T>
+void tree_sort_aux(I first, I last, T value) {
+    std::set<T> tree_set;
+    for(I ite = first; ite!= last; ite++)
+        tree_set.insert(*ite);
+    for(typename std::set<T>::iterator ite = tree_set.begin(); ite != tree_set.end(); ite++)
+        *(first++) = *ite;
+}
+template <typename I >
+void tree_sort(I first, I last) {
+    if (first!=last)
+        tree_sort_aux(first, last, *first);
+}
 template<typename T>
 void mergeSort(std::list<T> &l) {
     std::list<T> carry;
@@ -96,6 +109,8 @@ void initDemo(V &v){
         v.push_back(c);
 }
 
+template void tree_sort_aux(std::vector<int>::iterator, std::vector<int>::iterator, int);
+template void tree_sort(std::vector<int>::iterator, std::vector<int>::iterator);
 template void insertionSort(std::vector<int>::iterator, std::vector<int>::iterator) ;
 template void linearInsert(std::vector<int>::iterator, std::vector<int>::iterator, int);
 template void mergeSort(std::list<int> &l);
