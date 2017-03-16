@@ -9,13 +9,15 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include <set>
+#include <queue>
+#include <string>
 
 void lambdaFunDemo();
 void insertionSortDemo();
 void mergeSortDemo();
 void quickSortDemo();
 void treeSortDemo();
+void  priorityQueueDemo();
 
 int main(int argc, const char * argv[]) {
     //std::cout << "Hello, World!\n"<<std::endl;
@@ -23,7 +25,8 @@ int main(int argc, const char * argv[]) {
     //insertionSortDemo();
     //mergeSortDemo();
     //quickSortDemo();
-    treeSortDemo();
+    //treeSortDemo();
+    priorityQueueDemo();
     return 0;
 }
 
@@ -79,4 +82,17 @@ void treeSortDemo(){
     initDemo(arr);
     tree_sort(arr.begin(), arr.end());
     print(arr.begin(), --arr.end());
+}
+
+void  priorityQueueDemo(){
+    typedef std::greater<std::string> compare;  //Function object class for less-than inequality comparison
+    typedef std::vector<std::string> container;
+    std::priority_queue<std::string, container, compare > words;
+    words.push("apple");
+    words.push("pen");
+    words.push("pineapple");
+    while(!words.empty()){
+        std::cout<<words.top()<<std::endl;
+        words.pop();
+    }
 }
