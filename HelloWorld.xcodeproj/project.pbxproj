@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20703501EDC4A5A00FBD1F8 /* SortingDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E207034F1EDC4A5A00FBD1F8 /* SortingDemo.cpp */; };
+		E20703571EDC4FF300FBD1F8 /* STLDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E20703551EDC4FF300FBD1F8 /* STLDemo.cpp */; };
+		E207035A1EDC508100FBD1F8 /* Cpp11Demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E20703581EDC508100FBD1F8 /* Cpp11Demo.cpp */; };
 		E214D7DA1E12A7B500CC2019 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E214D7D91E12A7B500CC2019 /* main.cpp */; };
 		E24B1DDD1E57F3DD00DF4379 /* MySorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E24B1DDC1E57F3DD00DF4379 /* MySorting.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E207034E1EDC49A600FBD1F8 /* SortingDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortingDemo.h; sourceTree = "<group>"; };
+		E207034F1EDC4A5A00FBD1F8 /* SortingDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortingDemo.cpp; sourceTree = "<group>"; };
+		E20703551EDC4FF300FBD1F8 /* STLDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = STLDemo.cpp; sourceTree = "<group>"; };
+		E20703561EDC4FF300FBD1F8 /* STLDemo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLDemo.hpp; sourceTree = "<group>"; };
+		E20703581EDC508100FBD1F8 /* Cpp11Demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cpp11Demo.cpp; sourceTree = "<group>"; };
+		E20703591EDC508100FBD1F8 /* Cpp11Demo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cpp11Demo.hpp; sourceTree = "<group>"; };
 		E214D7D61E12A7B500CC2019 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		E214D7D91E12A7B500CC2019 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E24B1DDB1E57F16B00DF4379 /* MySorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySorting.h; sourceTree = "<group>"; };
@@ -60,7 +69,13 @@
 		E214D7D81E12A7B500CC2019 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				E20703561EDC4FF300FBD1F8 /* STLDemo.hpp */,
+				E20703551EDC4FF300FBD1F8 /* STLDemo.cpp */,
 				E214D7D91E12A7B500CC2019 /* main.cpp */,
+				E20703581EDC508100FBD1F8 /* Cpp11Demo.cpp */,
+				E20703591EDC508100FBD1F8 /* Cpp11Demo.hpp */,
+				E207034E1EDC49A600FBD1F8 /* SortingDemo.h */,
+				E207034F1EDC4A5A00FBD1F8 /* SortingDemo.cpp */,
 				E24B1DDB1E57F16B00DF4379 /* MySorting.h */,
 				E24B1DDC1E57F3DD00DF4379 /* MySorting.cpp */,
 			);
@@ -124,8 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20703571EDC4FF300FBD1F8 /* STLDemo.cpp in Sources */,
+				E20703501EDC4A5A00FBD1F8 /* SortingDemo.cpp in Sources */,
 				E24B1DDD1E57F3DD00DF4379 /* MySorting.cpp in Sources */,
 				E214D7DA1E12A7B500CC2019 /* main.cpp in Sources */,
+				E207035A1EDC508100FBD1F8 /* Cpp11Demo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
