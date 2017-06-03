@@ -15,5 +15,5 @@
 
 void STLDemoMain();
 void  priorityQueueDemo();
-
+void swapDemo();
 #endif /* STLDemo_hpp */

@@ -16,7 +16,7 @@ void lambdaFunDemo();
 int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n"<<std::endl;
     //sortingDemoMain();
-    //STLDemoMain();
+    STLDemoMain();
     cpp11Demo();
     
     return 0;
