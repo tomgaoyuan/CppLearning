@@ -108,7 +108,7 @@
 		E214D7CE1E12A7B500CC2019 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "高原";
 				TargetAttributes = {
 					E214D7D51E12A7B500CC2019 = {
@@ -240,7 +240,6 @@
 		E214D7DE1E12A7B500CC2019 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,7 +247,6 @@
 		E214D7DF1E12A7B500CC2019 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
