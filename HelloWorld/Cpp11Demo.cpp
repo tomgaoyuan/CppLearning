@@ -12,7 +12,10 @@ void cpp11Demo(){
     //lambdaFunDemo();
     //autoDemo();
     //foreachDemo();
-    rightValRefDemo();
+    //initListDemo();
+    //varTemplateDemo(1,'2',3.0);
+    //rightValRefDemo();
+    initListDemo2();
 }
 //A c++11 lambda function demo
 void lambdaFunDemo() {
@@ -41,10 +44,42 @@ void foreachDemo(){
         std::cout<<i<<std::endl;
     
 }
+//C++ initializtion list
+void initListDemo(){
+    
+    std::vector<int> v = {1,2,3,4,5};
+    for(int i : v)
+        std::cout<<i<<std::endl;
+}
+//variadic templates
+template< class T >
+void printArg(T t) {
+    std::cout<<t<<std::endl;
+}
+template<  class ...Args >
+void varTemplateDemo(Args... args){
+    int a[] = {(printArg(args),0)...};
+}
+
 std::string getName(){
     return std::string("Tom");
 }
 void rightValRefDemo(){
     std::string &&name = getName();
     std::cout<<name<<std::endl;
+}
+//initializer list demo
+class LastInt{
+public:
+    int i;
+    LastInt(std::initializer_list<int> l) {
+        i = (int) l.size();
+    }
+    ~LastInt() {
+        std::cout<<i<<std::endl;
+    }
+};
+void initListDemo2(){
+    LastInt *obj = new LastInt({1,2,3});
+    delete obj;
 }

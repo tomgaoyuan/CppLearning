@@ -16,5 +16,9 @@ void cpp11Demo();
 void lambdaFunDemo();
 void autoDemo();
 void foreachDemo();
+void initListDemo();
 void rightValRefDemo();
+template<  class ...Args >
+void varTemplateDemo(Args... args);
+void initListDemo2();
 #endif /* Cpp11Demo_hpp */

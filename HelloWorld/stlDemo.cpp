@@ -10,7 +10,7 @@
 
 void STLDemoMain(){
     //priorityQueueDemo();
-    swapDemo();
+    //swapDemo();
 }
 void priorityQueueDemo(){
     typedef std::greater<std::string> compare;  //Function object class for less-than inequality comparison
@@ -29,5 +29,5 @@ void swapDemo(){
     int a = 1, b = 2;
     std::cout<<"Before:"<<a<<","<<b<<std::endl;
     std::swap(a, b);
-    std::cout<<"Before:"<<a<<","<<b<<std::endl;
+    std::cout<<"After:"<<a<<","<<b<<std::endl;
 }
