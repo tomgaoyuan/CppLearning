@@ -44,7 +44,8 @@ void mergeSortDemo(){
 void quickSortDemo(){
     std::vector<int> arr;
     initDemo(arr);
-    quick_sort_loop(arr.begin(), arr.end());
+    //quick_sort_loop(arr.begin(), --arr.end());
+    quick_sort_loop_v2(arr.begin(), --arr.end());
     print(arr.begin(), --arr.end());
 }
 

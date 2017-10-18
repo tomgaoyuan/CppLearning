@@ -73,14 +73,34 @@ template<typename I, typename T>
 I unguarded_partition(I first, I last, T pivot) {
     while(1){
         while(*first < pivot) first++;
-        last--;
-        while(*last > pivot) last--;
+        while(*last >= pivot) last--;
         if (first >= last) return first;
-        *first += *last;
+        *first += *last;        //swap *first and *last
         *last = *first - *last;
         *first -= *last;
-        ++first;
     }
+}
+
+template<typename I>
+I unguarded_partition(I first, I last) {    //the algorithm introduction version
+    I i = first - 1;
+    for(I j = first; j < last; j++){
+        if ( *j <= *last ) {
+            i++;
+            if (i != j) {
+                *i += *j;        //swap *i and *j
+                *j= *i - *j;
+                *i -= *j;
+            }
+        }
+    }
+    i++;
+    if (i != last){
+        *i += *last;        //swap *i and *last
+        *last= *i - *last;
+        *i -= *last;
+    }
+    return i;
 }
 
 template<typename I>
@@ -88,15 +108,25 @@ void quick_sort_loop(I first, I last){
     I cut = unguarded_partition(first, last, *(first + (last-first)/2) );
     while(last - first > 1){
         if(cut-first > last-cut) {
-            quick_sort_loop(first, cut);
-            first = cut;
+            if (cut - first > 1)
+                quick_sort_loop(first, cut-1);
+            first = cut+1;
         } else {
-            quick_sort_loop(cut, last);
-            last = cut;
+            if (last - cut > 1)
+                quick_sort_loop(cut+1, last);
+            last = cut-1;
         }
     }
 }
 
+template<typename I>
+void quick_sort_loop_v2(I first, I last){
+    if (last - first > 0) {
+        I cut = unguarded_partition(first, last);
+        quick_sort_loop_v2(first, cut-1);
+        quick_sort_loop_v2(cut+1, last);
+    }
+}
 template <class I>
 void print(I first, I last) {
     while (first!=last) std::cout<<*first++<<std::endl;
@@ -107,6 +137,8 @@ template<typename V>
 void initDemo(V &v){
     for(int c = 9; c>=0 ; c--)
         v.push_back(c);
+    v.push_back(9);
+    v.push_back(0);
 }
 
 template void tree_sort_aux(std::vector<int>::iterator, std::vector<int>::iterator, int);
@@ -120,3 +152,5 @@ template void initDemo(std::list<int>&);
 template void initDemo(std::vector<int>&);
 template void quick_sort_loop(std::vector<int>::iterator, std::vector<int>::iterator);
 template std::vector<int>::iterator unguarded_partition(std::vector<int>::iterator, std::vector<int>::iterator, int);
+template void quick_sort_loop_v2(std::vector<int>::iterator, std::vector<int>::iterator);
+template std::vector<int>::iterator unguarded_partition(std::vector<int>::iterator, std::vector<int>::iterator);
